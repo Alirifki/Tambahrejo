@@ -1,24 +1,39 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import 'flowbite';
+import Beranda from './components/Layouts/Beranda';
+import Home from './pages/home';
+import Auth from './components/Layouts/Auth';
+import Formlogin from './components/Fragments/Formlogin';
+import Dashboard from './pages/dashboard';
+
+const router = createBrowserRouter([
+ {
+  path : '/',
+  element:  <Beranda/>,
+  children:[
+    {
+      path:'/home',
+      element:<Home/>
+    },
+    {
+      path:'/dashboard',
+      element:<Dashboard/>
+    },
+    {
+      path:"/login",
+      element:<Auth/>
+    }
+  ]
+ }
+
+])
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
