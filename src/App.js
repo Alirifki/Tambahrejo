@@ -23,7 +23,7 @@ const App = () => {
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: 'tambahrejo',
     element: <Beranda />, // Menggunakan Beranda sebagai komponen utama
     children: [
       {
