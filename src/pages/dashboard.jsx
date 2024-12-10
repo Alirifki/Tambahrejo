@@ -109,8 +109,11 @@ const Dashboard= () => {
           </Table>
        </div>
       </div>
+      <Button className="ml-5 bg-black" onClick={handleLogout}>Logout</Button>
        <div className="flex justify-center mt-5">
         <Counter/>
+       </div>
+       <div>
        </div>
     </>
   )

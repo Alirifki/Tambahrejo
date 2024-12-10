@@ -1,8 +1,10 @@
 import React from 'react'
 import Cards from '../components/Fragments/Card'
-import Berita from '../components/Fragments/Berita'
 import { Button } from 'flowbite-react'
 import Card2 from '../components/Fragments/Card2'
+
+
+
 
 const statistik =[
     {
@@ -12,29 +14,78 @@ const statistik =[
     {
         judul: 'Desa',
         ket : '7 dusun'
-    }
+    },
+    {
+        judul: 'Pendidikan',
+        ket : '86 Sekolahan'
+    },
+    {
+        judul: 'Kesehatan',
+        ket : '2 Pukesmas'
+    },
+    {
+        judul: 'Umum',
+        ket : '1 Pasar'
+    },
+    {
+        judul: 'Temapt Ibadah',
+        ket : '15 Temapt'
+    },
 ]
+const produks = [
+    {
+      id: 1,
+      title:"Specs",
+      image:"/img/logo.png",
+      nama:" 500000",
+      deskripsi:'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      tgl:'06 November 2024'
+    },
+    {
+      id: 2,
+      title:"nike",
+      image:"https://media.istockphoto.com/id/1019886414/id/foto/pemilih-dengan-latar-belakang-bendera-indonesia-ilustrasi-3d.jpg?s=612x612&w=0&k=20&c=Z530Eyys2hHGIqWVUDJWG4Sou_A09qWPrw-upqXNu1s=",
+      nama:" 400000",
+      deskripsi:`Lorem ipsum dolor sit amet, consectetur adipisicing elit.`,
+       tgl:'06 November 2024',
+       profile:'/img/profile.jpg'
+    },
+    {
+      id: 3,
+      title:"adidas",
+      image:"/img/logo.png",
+      nama:" 400000",
+      deskripsi:`Lorem ipsum dolor sit amet, consectetur adipisicing elit.`,
+      tgl:'06 November 2024'
+    },
+    {
+      id: 4,
+      title:"adidas",
+      image:"/img/logo.png",
+      nama:" 400000",
+      deskripsi:`Lorem ipsum dolor sit amet, consectetur adipisicing elit.`,
+      tgl:'06 November 2024'
+    },
+    ]
 
-
+   
 const Home = (props) => {
   return (
+  <>
             <div>
                 {/* Background */}
-                <div class="bg-center bg-cover bg-no-repeat bg-[url('https://asset.kompas.com/crops/T3BK9gGBxjdwRBJzXv9xfeERI3c=/83x0:707x416/750x500/data/photo/2020/08/30/5f4b2fa3709bc.jpg')]">
-                    <div class="px-4 mx-auto content-start max-w-screen-xl py-24 lg:py-56">
+                <div className="bg-center bg-cover bg-no-repeat bg-[url('https://asset.kompas.com/crops/T3BK9gGBxjdwRBJzXv9xfeERI3c=/83x0:707x416/750x500/data/photo/2020/08/30/5f4b2fa3709bc.jpg')]">
+                    <div className="px-4 mx-auto content-start max-w-screen-xl py-24 lg:py-56">
                         <div className='flex flex-wrap'>
-                        <h1 class="w-full mb-6 text-3xl font-playwrite tracking-tight leading-none text-white md:text-5xl lg:text-xl">Selamat Datang di Website Resmi</h1>
-                        <p class="w-full mb-8 font-bold font-playwrite text-gray-300 lg:text-5xl sm:px-16">Desa Tambahrejo</p>
-                        <p class="w-full mb-6 text-3xl font-playwrite tracking-tight leading-none text-white md:text-5xl lg:text-xl">Kecamatan Bandar, Kabupaten Batang, Jawa Tengah</p>
-                        
-                            <a href="#" class="inline-flex my-2 justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-                                <svg class=" w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                                </svg>
-                                Pengaduan
-                            </a>
-                            <a href="#" class="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
-                                Kabar Desa
+                        <h1 className="w-full mb-6 text-3xl font-playwrite tracking-tight leading-none text-white md:text-5xl lg:text-xl">Selamat Datang di Website Resmi</h1>
+                        <p className="w-full mb-8 font-bold font-playwrite text-gray-300 lg:text-5xl sm:px-16">Desa Tambahrejo</p>
+                        <p className="w-full mb-6 text-3xl font-playwrite tracking-tight leading-none text-white md:text-5xl lg:text-xl">Kecamatan Bandar, Kabupaten Batang, Jawa Tengah</p>
+{/*                         
+                            <a href="#" className="inline-flex my-2 justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                                Jelajah
+                            </a> */}
+                            <a href="#" className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 sm:ms-4 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                                Jelajah
                             </a>  
                         
                         </div>
@@ -42,31 +93,35 @@ const Home = (props) => {
                 </div>
 
                 {/* Statistik */}
-                <div class="w-full lg:-mt-28 z-50">
-                    <div class="container z-10 mx-auto">
+                <div className="w-full lg:-mt-28 z-50">
+                    <div className="container z-10 mx-auto">
                         <div className='flex'>
-                            <div class="w-full bg-white p-2 py-5 lg:p-10 mb-5 rounded-md">
+                            <div className="w-full bg-white p-2 py-5 lg:p-10 mb-5 rounded-md">
                                 <p className='font-playwrite text-slate-500 text md font-boldml-2'>
                                     Stastistik
                                 </p>
-                                <div class='flex flex-wrap'>
-                                    <div className='w-1/2 mt-8 h-1/4'> 
-                                        <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://plus.unsplash.com/premium_photo-1689568158814-3b8e9c1a9618?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""/>
-                                            <div class="flex flex-col justify-between p-4 leading-normal">
-                                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Kepala Desa</h5>
-                                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Muhammad .... </p>
+                                <div className='flex flex-wrap'>
+                                    <div className='w-1/2 mt-8 h-1/4 md:w-1/2'> 
+                                        <a href="#" className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                            <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://plus.unsplash.com/premium_photo-1689568158814-3b8e9c1a9618?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""/>
+                                            <div className="flex flex-col justify-between p-4 leading-normal">
+                                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Kepala Desa</h5>
+                                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Muhammad .... </p>
 
                                             </div>
                                         </a>   
                                     </div>
-
-                                    <div className='lg:w-[50%] mt-8'>
-                                        <div className='flex flex-wrap'>
-                                            <Card2>
-                                                </Card2>                                       
+                                    <div className='lg:w-[50%] mt-8 md:w-1/2'>  
+                                    <button onClick={()=>{}}>
+                                        <div className='flex flex-wrap md:h-50'>
+                                            {statistik.map((statis)=>(
+                                                <Card2 judul={statis.judul} ket={statis.ket}/>                                       
+                                            ))
+                                        }
                                         </div>
+                                    </button>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -77,20 +132,23 @@ const Home = (props) => {
                 {/* kabar berita */}
                <div className='container mx-auto'>
                     <p className='font-playwrite text-slate-500 text-md font-bold ml-2'>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 inline m-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokewidth="1.5" stroke="currentColor" class="w-5 inline m-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"></path>
                     </svg>
                     Kabar Desa
                     </p>
-                    <div className='flex flex-wrap justify-center m-0 mb-5 z-50'>
-                        <Berita/>
-                        <Berita/>
-                        <Berita/>
-                        <Berita/>
+                    <div className='flex flex-wrap justify-center m-0 mb-5 z-50'>                   
+                        {produks.map((berita)=>(
+                             <Cards key={berita.id}>
+                             <Cards.Header  image={berita.image} className="mt-3" />
+                             <Cards.Body title={berita.title}>{berita.deskripsi}
+                               </Cards.Body>
+                             <Cards.Footer penulis={berita.profile} nama={berita.nama} tgl={berita.tgl}
+                             />
+                             </Cards>
+                        ))}
                     </div>
-                 
-                    
                </div>
 
                {/* form pengaduan */}
@@ -110,16 +168,16 @@ const Home = (props) => {
                             <div className="w-full lg:w-1/2 p-1">
                                 <div className='flex flex-wrap p-3'>
                                     <div className='w-1/2 p-2'>
-                                        <label for="first_name" class="block mb-2 text-sm font-playwrite font-semibold text-white dark:text-white">Nama</label>
-                                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  />
+                                        <label for="first_name" className="block mb-2 text-sm font-playwrite font-semibold text-white dark:text-white">Nama</label>
+                                        <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  />
                                     </div>
                                     <div className='w-1/2 p-2'>
-                                        <label for="last_name" class="block mb-2 text-sm font-playwrite font-semibold text-white dark:text-white">Telephone</label>
-                                        <input type="text" id="last_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                                        <label for="last_name" className="block mb-2 text-sm font-playwrite font-semibold text-white dark:text-white">Telephone</label>
+                                        <input type="text" id="last_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
                                     </div>
                                 </div>
                                 <div className='p-4'> 
-                                    <label for="message" class="block mb-2 text-sm font-playwrite font-semibold text-white dark:text-white" >Kritik dan Saran</label>
+                                    <label for="message" className="block mb-2 text-sm font-playwrite font-semibold text-white dark:text-white" >Kritik dan Saran</label>
                                     <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" ></textarea>
                                 </div>
                                 <div className='p-4'>
@@ -133,6 +191,7 @@ const Home = (props) => {
                </div>
                
             </div>
+  </>
             
   )
 }
